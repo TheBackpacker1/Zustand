@@ -1,7 +1,41 @@
 .App {
   background: var(--COLOR-GRAY);
   min-height: 100vh;
+  padding: var(--spacing-md);
+  
+  /* Responsive Flexbox Layout */
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  
+  /* Ensure content doesn't overflow */
+  overflow-x: auto;
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+  .App {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+    align-items: stretch;
+  }
+}
+
+/* Small Mobile Layout */
+@media (max-width: 480px) {
+  .App {
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
+  }
 }

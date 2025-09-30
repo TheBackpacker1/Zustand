@@ -5,13 +5,46 @@
   --COLOR-PLANNED: #f4a261;
   --COLOR-ONGOING: #98c1d9;
   --COLOR-DONE: #ee6c4d;
-  font-family: Helvetica;
-}
-
-body {
-  margin: 0;
+  
+  /* Responsive spacing variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Responsive font sizes */
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto; /* Allow horizontal scroll on very small screens */
+}
+
+/* Responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
 }
